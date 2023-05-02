@@ -1,0 +1,17 @@
+@import "src/app/styles/vars.scss";
+
+.header {
+  height: $headerHeight;
+  padding: 0 $layoutPadding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locale {
+  cursor: pointer;
+}
+
+.highlightedLocale {
+  color: $blue
+}

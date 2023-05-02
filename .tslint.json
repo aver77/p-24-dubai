@@ -2,8 +2,7 @@
     "extends": [
         "tslint:recommended",
         "tslint-react",
-        "tslint-config-prettier",
-        "react-hooks"
+        "tslint-config-prettier"
     ],
     "rulesDirectory": [
         "tslint-plugin-prettier"
@@ -11,6 +10,7 @@
     "rules": {
         "prettier": true,
         "interface-name": false,
+        "no-console": false,
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     }
