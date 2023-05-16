@@ -1,0 +1,18 @@
+@import "src/app/styles/vars";
+
+.container {
+  padding: 0 $layoutPadding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 74px;
+  @media screen and (max-width: $ipadWith) {
+    gap: 40px;
+    padding: 0 $layoutPaddingIpad;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    gap: 24px;
+    flex-direction: column;
+    padding: 0 $layoutPaddingMobile;
+  }
+}

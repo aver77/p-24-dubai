@@ -1,0 +1,30 @@
+@import "src/app/styles/vars";
+
+.container {
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $darkGray;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

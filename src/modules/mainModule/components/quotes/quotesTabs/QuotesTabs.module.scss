@@ -1,0 +1,14 @@
+@import "src/app/styles/vars";
+
+.tabLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.tabLabelText {
+  :global(:not(.ant-tabs-tab-active)) {
+    color: $gray
+  }
+}

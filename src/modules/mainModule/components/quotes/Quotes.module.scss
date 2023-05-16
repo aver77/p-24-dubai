@@ -1,0 +1,26 @@
+@import "src/app/styles/vars";
+
+.container {
+  margin-top: 64px;
+  padding: 0 $layoutPadding;
+  :global(.ant-tabs-nav) {
+    width: fit-content;
+    margin: 0 !important;
+  }
+  :global(.ant-tabs-tab) {
+    padding: 12px 32px !important;
+  }
+  @media screen and (max-width: 1419px) {
+    :global(.ant-tabs-nav) {
+      margin: 0 auto !important;
+    }
+  }
+  @media screen and (max-width: $ipadWith) {
+    padding: 0 $layoutPaddingIpad;
+    margin-top: 24px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    padding: 0 $layoutPaddingMobile;
+    margin-top: 0;
+  }
+}

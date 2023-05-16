@@ -1,0 +1,60 @@
+@import "src/app/styles/vars";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 24px;
+  gap: 24px;
+  @media screen and (max-width: $ipadWith) {
+    margin-right: 16px;
+    gap: 16px;
+  }
+}
+
+.item {
+  max-width: 516px;
+  max-height: 311px;
+  background: white;
+  border: 1px solid rgba(47, 43, 67, 0.1);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 24px;
+  transition: 0.2s ease;
+  @media screen and (max-width: $iphoneWidth) {
+    padding: 20px;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: black;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(47, 43, 67, 0.6);
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 14px;
+  }
+}
+
+.btn {
+  background: rgba(47, 43, 67, 0.05) !important;
+  border-radius: 12px;
+  color: black !important;
+  border: none !important;
+}

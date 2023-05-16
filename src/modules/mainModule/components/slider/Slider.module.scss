@@ -1,0 +1,79 @@
+@import "src/app/styles/vars";
+
+.sliderWrap {
+  position: relative;
+  padding-left: $layoutPadding;
+  :global(.alice-carousel__prev-btn) {
+    padding-top:55px !important;
+    width: fit-content !important;
+    span::after {
+      content: url("assets/leftArrow.png");
+    }
+  }
+  :global(.alice-carousel__next-btn) {
+    padding-top:55px !important;
+    width: fit-content !important;
+    span::after {
+      content: url("assets/rightArrow.png");
+    }
+  }
+  @media screen and (max-width: $ipadWith) {
+    padding-left: $layoutPaddingIpad;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    :global(.alice-carousel__next-btn) {
+      padding-top: 16px !important;
+    }
+    :global(.alice-carousel__prev-btn) {
+      padding-top: 16px !important;
+    }
+    padding-left: $layoutPaddingMobile;
+  }
+}
+
+.sliderPaddedBtns {
+  :global(.alice-carousel__prev-btn) {
+    padding-top: 80px !important;
+  }
+  :global(.alice-carousel__prev-btn) {
+    padding-top: 80px !important;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    :global(.alice-carousel__next-btn) {
+      padding-top: 50px !important;
+    }
+    :global(.alice-carousel__prev-btn) {
+      padding-top: 50px !important;
+    }
+  }
+}
+
+.left {
+  position: absolute;
+}
+
+.right {
+  position: absolute;
+}
+
+.extraDesc {
+  cursor: pointer;
+  position: absolute;
+  bottom: 100px;
+  color: #2D9CDB;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: underline;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 14px;
+    bottom: 80px;
+  }
+}
+
+
+

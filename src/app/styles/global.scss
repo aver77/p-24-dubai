@@ -1,5 +1,6 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "vars";
 
 //reset
 
@@ -51,3 +52,43 @@ input{
 }
 
 //other global styles
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #000 !important;
+  text-shadow: none !important;
+  font-weight: 600 !important;
+
+}
+.ant-tabs .ant-tabs-tab:hover {
+  color: #000 !important;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+  background: #000 !important;
+}
+
+.ant-input:focus, .ant-input:hover, .ant-input:active {
+  border-color: black !important;
+  box-shadow: none !important;
+}
+
+.ant-btn {
+  height: auto !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border-radius: 12px !important;
+  padding: 8px 15px !important;
+}
+
+.ant-btn-default {
+  color: white !important;
+  background: $green !important;
+  border-color: $green !important;
+  box-shadow: 0 1px 3px rgba(47, 43, 67, 0.1), inset 0px -1px 0px rgba(47, 43, 67, 0.1) !important;
+}
+
+.ant-input::placeholder {
+  color: rgba(47, 43, 67, 0.6);
+  font-weight: 500;
+  font-size: 16px;
+}

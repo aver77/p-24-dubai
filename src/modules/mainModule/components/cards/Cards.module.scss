@@ -1,0 +1,28 @@
+@import "src/app/styles/vars";
+
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 $layoutPadding;
+  @media screen and (max-width: $ipadWith) {
+    justify-content: center;
+    padding: 0 $layoutPaddingIpad;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    gap: 24px;
+    padding: 0 $layoutPaddingMobile;
+  }
+}
+
+.lastCardImg {
+  width: 343px;
+}
+
+.img {
+  @media screen and (max-width: $iphoneWidth) {
+    width: 200px;
+  }
+}

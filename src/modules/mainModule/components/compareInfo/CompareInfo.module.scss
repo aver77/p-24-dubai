@@ -1,0 +1,85 @@
+@import "src/app/styles/vars";
+
+.container {
+  margin-top: 128px;
+  padding: 0 $layoutPadding;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  @media screen and (max-width: 1388px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: $ipadWith) {
+    margin-top: 94px;
+    padding: 0 $layoutPaddingIpad;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    margin-top: 72px;
+    padding: 0 $layoutPaddingMobile;
+  }
+}
+
+.compareSection {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 160px;
+  @media screen and (max-width: 1388px) {
+    gap: 20px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+  }
+}
+
+.compareText {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  @media screen and (max-width: $ipadWith) {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.btn {
+  width: 211px;
+  @media screen and (max-width: $iphoneWidth) {
+    width: 100%;
+  }
+}
+
+.infoSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  @media screen and (max-width: 1388px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: $ipadWith) {
+    gap: 48px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    gap: 24px;
+  }
+}
+
+.infoSectionItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 84px;
+  @media screen and (max-width: $ipadWith) {
+    gap: 48px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    gap: 24px;
+  }
+}

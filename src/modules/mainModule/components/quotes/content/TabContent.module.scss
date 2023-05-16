@@ -1,0 +1,94 @@
+@import "src/app/styles/vars";
+$tabHeight: 46px;
+$tabWight: 570px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  column-gap: 20px;
+  @media screen and (max-width: 1419px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    row-gap: 24px;
+  }
+}
+
+.infoContainer {
+  max-width: $tabWight;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @media screen and (max-width: 1419px) {
+    align-items: center;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    gap: 24px;
+  }
+}
+
+.input {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(47, 43, 67, 0.1), inset 0px -1px 0px rgba(47, 43, 67, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(47, 43, 67, 0.1);
+  padding: 8px 12px !important;
+}
+
+.titleText {
+  margin-top: 40px;
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: 800;
+  @media screen and (max-width: $ipadWith) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    margin-top: 24px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.imgContainer {
+  max-width: 575px;
+  margin-top: -$tabHeight;
+  @media screen and (max-width: $iphoneWidth) {
+    margin-top: 0;
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.quotesActionsContainer {
+  display: flex;
+  justify-content: start;
+  gap: 24px;
+  @media screen and (max-width: $iphoneWidth) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.quotesActionsInfoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  @media screen and (max-width: $iphoneWidth) {
+    width: 100%;
+  }
+}
+
+.quotesExtraText {
+  color: $blue;
+  cursor: pointer;
+  text-decoration: underline;
+}

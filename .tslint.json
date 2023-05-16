@@ -10,7 +10,10 @@
     "rules": {
         "prettier": true,
         "interface-name": false,
+        "jsx-boolean-value": false,
+        "jsx-no-lambda": false,
         "no-console": false,
+        "no-empty": false,
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     }

@@ -6,9 +6,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $ipadWith) {
+    padding: 0 $layoutPaddingIpad;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    padding: 0 $layoutPaddingMobile;
+  }
 }
 
-.locale {
+.locale, .burgerIcon {
   cursor: pointer;
 }
 

@@ -1,11 +1,11 @@
 import React from "react";
 import "./styles/global.scss";
-import Header from "components/header";
+import RoutesComponent from "./routes";
 
 function App() {
     return (
         <>
-            <Header />
+            <RoutesComponent />
         </>
     );
 }

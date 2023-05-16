@@ -3,6 +3,60 @@ const EN = {
     home: "Home",
     life: "Life",
     pets: "Pets",
-    compareQuotesMain: "Compare quotes and get the best"
+    compareQuotesMain: "Compare quotes and get the best",
+    getQuotes: "Get Quotes",
+    beenHereBefore: "Been here before?",
+    getYourQuotesBack: "Get your quotes back",
+    phoneNumber: "Phone number",
+    zipCode: "Enter Zip Code",
+    titleCustomizedFree: "Get free, customized quotes in under 3 minutes",
+    compareQuotes: "Compare customized quotes",
+    compareQuotesDesc: "We'll offer precise, real-time quotes after you answer a few questions.",
+    onePlaceDiscounts: "One place for all discounts",
+    onePlaceDiscountsDesc:
+        "Get all of the discounts you're eligible for in one place. Look around for the best deal in insurance.",
+    buyOnline: "Call or buy online",
+    buyOnlineDesc:
+        "You can buy the policy you want and customize it to your needs right on the website, or arrange a phone call with an agent.",
+    limitedOffers: "Limited Offers",
+    hearItFromCustomers: "Hear it from our customers",
+    seeAllReviews: "See all reviews by our customer",
+    whyCompareWith: "Why compare with Policy24?",
+    signSavings: "Significant Savings",
+    signSavingsDesc:
+        "Policy24 users who shop around and compare rates save an average of AED 996 per year on insurance.",
+    accessDiscounts: "Access Discounts",
+    accessDiscountsDesc: "Take advantage of exclusive pricing and savings opportunities.",
+    noHiddenCost: "No hidden costs, ever",
+    noHiddenCostDesc: "Everything is as it appears. In one place, you can compare real quotes.",
+    getItBy: "Get it by phone or online",
+    getItByDesc: "We give you the freedom to choose how and when you get insurance.",
+    compareWithTopRated: "Compare quotes from top-rated companies",
+    getYourDose: "Get your dose of insurance news, tips, and tricks",
+    lookingToSafe: "Looking to save smarter?",
+    viewMyQuotes: "View my quotes",
+    trustExpertise: "Expertise You Can Trust",
+    trustExpertiseDesc:
+        "By signing this pledge, you commit to partnering with a company backed by decades of experience, ensuring you receive the most comprehensive and personalized insurance solutions.",
+    customerApproach: "Customer-Centric Approach",
+    customerApproachDesc:
+        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones.",
+    empoweringKnowledge: "Empowering You with Knowledge",
+    empoweringKnowledgeDesc:
+        "Together, we pledge to build your understanding of insurance, empowering you to make informed decisions that align with your unique financial goals and circumstances.",
+    company: "Company",
+    legal: "Legal",
+    terms: "Term & conditions",
+    privacy: "Privacy",
+    social: "Social",
+    facebook: "Facebook",
+    inst: "Instagram",
+    whatsapp: "Whatsapp",
+    twitter: "Twitter",
+    mobile: "800 (Policy24) 72 93 22",
+    schedule: "Monday - Sunday: 10:00 AM to 04:00 PM, and 08:00 PM to 02:00 AM",
+    credentials:
+        "Policy24 LLC is authorized and regulated by the UAE Central Bank. Policy24 LLC is a licensed broker by the Central Bank with license number (287). Policy24 LLC© all rights reserved 2023. Policy24 LLC is located in Sky Tower, office 1006, Al Reem Island, Abu Dhabi. NO08773",
+    licence: "Licensed By Central Bank of UAE License Number 900"
 };
 export default EN;
