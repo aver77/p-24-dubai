@@ -14,6 +14,8 @@ const BurgerMenu: FC<IBurgerMenu> = ({ opened, setOpened, langSwitcher }) => {
         setOpened(false);
     };
 
+    document.body.style.overflow = opened ? "hidden" : "auto";
+
     if (!opened) {
         return null;
     }
