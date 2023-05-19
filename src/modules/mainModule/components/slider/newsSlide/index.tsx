@@ -2,6 +2,7 @@ import { FC, ReactNode } from "react";
 
 import styles from "./NewsSlide.module.scss";
 import Button from "shared/ui/button";
+import { FormattedMessage } from "react-intl";
 
 interface INewsSlide {
     title: string;
@@ -17,7 +18,9 @@ const NewsSlide: FC<INewsSlide> = ({ title, text, secondTitle, secondText, btnTe
         btnText
     ) : (
         <div>
-            <span style={{ marginRight: "12px" }}>Learn more</span>
+            <span style={{ marginRight: "12px" }}>
+                <FormattedMessage id={"learnMore"} />
+            </span>
             <span>{`>`}</span>
         </div>
     );

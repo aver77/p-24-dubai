@@ -57,6 +57,17 @@ const EN = {
     schedule: "Monday - Sunday: 10:00 AM to 04:00 PM, and 08:00 PM to 02:00 AM",
     credentials:
         "Policy24 LLC is authorized and regulated by the UAE Central Bank. Policy24 LLC is a licensed broker by the Central Bank with license number (287). Policy24 LLC© all rights reserved 2023. Policy24 LLC is located in Sky Tower, office 1006, Al Reem Island, Abu Dhabi. NO08773",
-    licence: "Licensed By Central Bank of UAE License Number 900"
+    licence: "Licensed By Central Bank of UAE License Number 900",
+    learnMore: "Learn more",
+    compareAndSave: "Compare & save",
+    newsMockText:
+        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones.",
+    newsMockTitle: "Chubb names Benoit Chasseguet Country President for France",
+    firstCustomerName: "Yazid Nassif",
+    secondCustomerName: "Mustapha Shams",
+    thirdCustomerName: "Abal Ibrahim",
+    fourthCustomerName: "Qantara Eid",
+    customerMockText:
+        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
 };
 export default EN;

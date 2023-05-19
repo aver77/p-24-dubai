@@ -30,70 +30,38 @@ export const getSliderItems = (intl: IntlShape, key: SlideKeyEnum) => {
             return [
                 <CustomersSlide
                     key={"1"}
-                    title={"Yazid Nassif"}
-                    text={
-                        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
-                    }
+                    title={intl.formatMessage({ id: "firstCustomerName" })}
+                    text={intl.formatMessage({ id: "customerMockText" })}
                 />,
                 <CustomersSlide
                     key={"2"}
-                    title={"Mustapha Shams"}
-                    text={
-                        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
-                    }
+                    title={intl.formatMessage({ id: "secondCustomerName" })}
+                    text={intl.formatMessage({ id: "customerMockText" })}
                 />,
                 <CustomersSlide
                     key={"3"}
-                    title={"Abal Ibrahim"}
-                    text={
-                        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
-                    }
+                    title={intl.formatMessage({ id: "thirdCustomerName" })}
+                    text={intl.formatMessage({ id: "customerMockText" })}
                 />,
                 <CustomersSlide
                     key={"4"}
-                    title={"Qantara Eid"}
-                    text={
-                        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
-                    }
+                    title={intl.formatMessage({ id: "fourthCustomerName" })}
+                    text={intl.formatMessage({ id: "customerMockText" })}
                 />
             ];
         }
         case SlideKeyEnum.NEWS: {
-            return [
-                <NewsSlide
-                    key={"1"}
-                    title={"Chubb names Benoit Chasseguet Country President for France"}
-                    secondTitle={"Chubb names Benoit Chasseguet Country President for France"}
-                    text={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                    secondText={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                />,
-                <NewsSlide
-                    key={"2"}
-                    title={"Chubb names Benoit Chasseguet Country President for France"}
-                    secondTitle={"Chubb names Benoit Chasseguet Country President for France"}
-                    text={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                    secondText={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                />,
-                <NewsSlide
-                    key={"3"}
-                    title={"Chubb names Benoit Chasseguet Country President for France"}
-                    secondTitle={"Chubb names Benoit Chasseguet Country President for France"}
-                    text={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                    secondText={
-                        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones."
-                    }
-                />
-            ];
+            return new Array(4)
+                .fill(undefined)
+                .map((el, index) => (
+                    <NewsSlide
+                        key={index}
+                        title={intl.formatMessage({ id: "newsMockTitle" })}
+                        secondTitle={intl.formatMessage({ id: "newsMockTitle" })}
+                        text={intl.formatMessage({ id: "newsMockText" })}
+                        secondText={intl.formatMessage({ id: "newsMockText" })}
+                    />
+                ));
         }
         default: {
             return [];
