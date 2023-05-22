@@ -1,18 +1,21 @@
-import { FC } from "react";
-import { FormattedMessage } from "react-intl";
+import { FC, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import { Input } from "antd";
 import Button from "shared/ui/button";
 import styles from "./TabContent.module.scss";
-import { useIntl } from "react-intl";
+import { CAR, HOME, LIFE, PETS } from "../contants";
+import Pickers from "./pickers";
 
 interface ITabContent {
     imageSrc: string;
-    quoteAction: () => void;
-    isCarContent?: boolean;
+    contentName: typeof CAR | typeof LIFE | typeof HOME | typeof PETS;
 }
 
-const Content: FC<ITabContent> = ({ imageSrc, isCarContent = false, quoteAction }) => {
+const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
     const intl = useIntl();
+    const [pickerOpened, setPickerOpened] = useState(false);
+
+    const onOpenPicker = () => setPickerOpened(true);
 
     return (
         <div className={styles.container}>
@@ -20,7 +23,7 @@ const Content: FC<ITabContent> = ({ imageSrc, isCarContent = false, quoteAction 
                 <p className={styles.titleText}>
                     <FormattedMessage id={"compareQuotesMain"} />
                 </p>
-                {isCarContent ? (
+                {contentName === CAR ? (
                     <Input
                         placeholder={intl.formatMessage({ id: "phoneNumber" })}
                         className={styles.input}
@@ -32,7 +35,7 @@ const Content: FC<ITabContent> = ({ imageSrc, isCarContent = false, quoteAction 
                     />
                 )}
                 <div className={styles.quotesActionsContainer}>
-                    <Button withShieldAndArrow className={styles.btn} onClick={quoteAction}>
+                    <Button withShieldAndArrow className={styles.btn} onClick={onOpenPicker}>
                         <FormattedMessage id={"getQuotes"} />
                     </Button>
                     <div className={styles.quotesActionsInfoText}>
@@ -48,6 +51,7 @@ const Content: FC<ITabContent> = ({ imageSrc, isCarContent = false, quoteAction 
             <div className={styles.imgContainer}>
                 <img className={styles.image} alt={"image"} src={imageSrc} />
             </div>
+            {pickerOpened && <Pickers contentName={contentName} setOpened={setPickerOpened} />}
         </div>
     );
 };

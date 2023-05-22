@@ -1,0 +1,11 @@
+@import "src/app/styles/vars";
+
+.container {
+  z-index: 2;
+  position: fixed;
+  background: white;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0
+}

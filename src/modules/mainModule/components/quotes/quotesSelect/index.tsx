@@ -19,16 +19,16 @@ const QuotesSelect = () => {
     const getSelectionContent = () => {
         switch (value) {
             case CAR: {
-                return <Content imageSrc={bestQuotesCar} quoteAction={() => {}} isCarContent />;
+                return <Content imageSrc={bestQuotesCar} contentName={CAR} />;
             }
             case HOME: {
-                return <Content imageSrc={bestQuotesHome} quoteAction={() => {}} />;
+                return <Content imageSrc={bestQuotesHome} contentName={HOME} />;
             }
             case LIFE: {
-                return <Content imageSrc={bestQuotesLife} quoteAction={() => {}} />;
+                return <Content imageSrc={bestQuotesLife} contentName={LIFE} />;
             }
             case PETS: {
-                return <Content imageSrc={bestQuotesPets} quoteAction={() => {}} />;
+                return <Content imageSrc={bestQuotesPets} contentName={PETS} />;
             }
         }
     };

@@ -38,24 +38,22 @@ const QuotesTabs = () => {
                 {
                     label: getTabLabel(<Car />, CAR, "1"),
                     key: "1",
-                    children: (
-                        <Content imageSrc={bestQuotesCar} quoteAction={() => {}} isCarContent />
-                    )
+                    children: <Content imageSrc={bestQuotesCar} contentName={CAR} />
                 },
                 {
                     label: getTabLabel(<Home />, HOME, "2"),
                     key: "2",
-                    children: <Content imageSrc={bestQuotesHome} quoteAction={() => {}} />
+                    children: <Content imageSrc={bestQuotesHome} contentName={HOME} />
                 },
                 {
                     label: getTabLabel(<Life />, LIFE, "3"),
                     key: "3",
-                    children: <Content imageSrc={bestQuotesLife} quoteAction={() => {}} />
+                    children: <Content imageSrc={bestQuotesLife} contentName={LIFE} />
                 },
                 {
                     label: getTabLabel(<Pets />, PETS, "4"),
                     key: "4",
-                    children: <Content imageSrc={bestQuotesPets} quoteAction={() => {}} />
+                    children: <Content imageSrc={bestQuotesPets} contentName={PETS} />
                 }
             ]}
         />
