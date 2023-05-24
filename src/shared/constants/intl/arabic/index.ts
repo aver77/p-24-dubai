@@ -69,6 +69,7 @@ const ARABIC = {
     thirdCustomerName: "أبال إبراهيم",
     fourthCustomerName: "القنطرة عيد",
     customerMockText:
-        "لقد تم استخدامها لمدة عام الآن. كل شيء مفصل ومنظمة تنظيما جيدا ، وبطبيعة الحال ، لعنة جميلة."
+        "لقد تم استخدامها لمدة عام الآن. كل شيء مفصل ومنظمة تنظيما جيدا ، وبطبيعة الحال ، لعنة جميلة.",
+    findModel: "Find model"
 };
 export default ARABIC;

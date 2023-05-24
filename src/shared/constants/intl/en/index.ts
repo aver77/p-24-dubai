@@ -68,6 +68,15 @@ const EN = {
     thirdCustomerName: "Abal Ibrahim",
     fourthCustomerName: "Qantara Eid",
     customerMockText:
-        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful."
+        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful.",
+    findModel: "Find model",
+    letsStartBrand: "Let’s start by picking your brand",
+    whatModel: "What is the model of your",
+    manufacturerYear: "What is the year of manufacture for your",
+    whereRegister: "Where will you register your",
+    whatIsValue: "What is the value of your",
+    anyInsuranceClaims: "Do you have any previous insurance claims?",
+    uaeLicenceLong: "How long do you have license in UAE?",
+    fillTheInfo: "Fill the contact information and get your quote now"
 };
 export default EN;

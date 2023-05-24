@@ -1,11 +1,74 @@
 @import "src/app/styles/vars";
 
 .container {
-  z-index: 2;
+  margin-top: $headerHeight;
+  padding: 24px;
+  z-index: $pickerZIndex;
   position: fixed;
   background: white;
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0
+  left: 0;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: $ipadWith), screen and (max-height: $ipadWith) {
+    padding: $layoutPaddingMobile
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 840px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 54px;
+  margin: 48px 0;
+  font-weight: 600;
+  text-align: center;
+  @media screen and (max-width: $ipadWith) {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 24px 0;
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 8px 0 16px 0;
+  }
+}
+
+.btnsContainer {
+  position: absolute;
+  bottom: 64px;
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.backBtn {
+  background: white !important;
+  border: 1px solid rgba(47, 43, 67, 0.1) !important;
+  & > div {
+    color: black !important;
+  }
+}
+
+.btnContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }

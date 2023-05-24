@@ -6,10 +6,10 @@ import Pets from "assets/svg/components/Pets";
 import styles from "./QuotesTabs.module.scss";
 import { FormattedMessage } from "react-intl";
 import Content from "../content";
-import bestQuotesCar from "assets/icons/main/bestQuotesCar.png";
-import bestQuotesHome from "assets/icons/main/bestQuotesHome.png";
-import bestQuotesLife from "assets/icons/main/bestQuotesLife.png";
-import bestQuotesPets from "assets/icons/main/bestQuotesPets.png";
+import bestQuotesCar from "assets/icons/main/familyImages/bestQuotesCar.png";
+import bestQuotesHome from "assets/icons/main/familyImages/bestQuotesHome.png";
+import bestQuotesLife from "assets/icons/main/familyImages/bestQuotesLife.png";
+import bestQuotesPets from "assets/icons/main/familyImages/bestQuotesPets.png";
 import { cloneElement, useState } from "react";
 import { CAR, HOME, LIFE, PETS } from "../contants";
 

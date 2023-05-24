@@ -3,10 +3,10 @@ import { FormattedMessage } from "react-intl";
 import styles from "./QuotesSelect.module.scss";
 import { CAR, HOME, LIFE, PETS } from "../contants";
 import { useState } from "react";
-import bestQuotesCar from "assets/icons/main/bestQuotesCar.png";
-import bestQuotesHome from "assets/icons/main/bestQuotesHome.png";
-import bestQuotesLife from "assets/icons/main/bestQuotesLife.png";
-import bestQuotesPets from "assets/icons/main/bestQuotesPets.png";
+import bestQuotesCar from "assets/icons/main/familyImages/bestQuotesCar.png";
+import bestQuotesHome from "assets/icons/main/familyImages/bestQuotesHome.png";
+import bestQuotesLife from "assets/icons/main/familyImages/bestQuotesLife.png";
+import bestQuotesPets from "assets/icons/main/familyImages/bestQuotesPets.png";
 import Content from "../content";
 
 const { Option } = Select;

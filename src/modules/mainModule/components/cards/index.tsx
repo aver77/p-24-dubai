@@ -3,7 +3,7 @@ import { FC } from "react";
 import styles from "./Cards.module.scss";
 import Card from "./card";
 import { useIntl } from "react-intl";
-import quotesCompanies from "assets/icons/main/quotesCompanies.png";
+import quotesCompanies from "assets/icons/main/companies/columnOfCompanies.png";
 import greenCarDiscounts from "assets/icons/main/greenCarDiscounts.png";
 import callOrBuy from "assets/icons/main/callOrBuyUmbrella.png";
 import cx from "classnames";

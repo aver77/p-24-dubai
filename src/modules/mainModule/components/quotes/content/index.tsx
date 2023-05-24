@@ -1,10 +1,12 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Input } from "antd";
+import Input from "shared/ui/input";
 import Button from "shared/ui/button";
 import styles from "./TabContent.module.scss";
 import { CAR, HOME, LIFE, PETS } from "../contants";
 import Pickers from "./pickers";
+import { regulateScroll } from "shared/utils/regulateScroll";
+import usePopupsStore from "shared/lib/store/popupsStore";
 
 interface ITabContent {
     imageSrc: string;
@@ -13,9 +15,18 @@ interface ITabContent {
 
 const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
     const intl = useIntl();
+    const { burgerOpened, setPickerOpened: setStorePickerOpened } = usePopupsStore(
+        (state) => state
+    );
+
     const [pickerOpened, setPickerOpened] = useState(false);
+    regulateScroll(pickerOpened || burgerOpened);
 
     const onOpenPicker = () => setPickerOpened(true);
+
+    useEffect(() => {
+        setStorePickerOpened(pickerOpened);
+    }, [pickerOpened]);
 
     return (
         <div className={styles.container}>
@@ -24,15 +35,9 @@ const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
                     <FormattedMessage id={"compareQuotesMain"} />
                 </p>
                 {contentName === CAR ? (
-                    <Input
-                        placeholder={intl.formatMessage({ id: "phoneNumber" })}
-                        className={styles.input}
-                    />
+                    <Input placeholder={intl.formatMessage({ id: "phoneNumber" })} />
                 ) : (
-                    <Input
-                        placeholder={intl.formatMessage({ id: "zipCode" })}
-                        className={styles.input}
-                    />
+                    <Input placeholder={intl.formatMessage({ id: "zipCode" })} />
                 )}
                 <div className={styles.quotesActionsContainer}>
                     <Button withShieldAndArrow className={styles.btn} onClick={onOpenPicker}>

@@ -1,7 +1,7 @@
 import { FC } from "react";
-import sukoon from "assets/icons/main/sukoonCompanyGray.png";
-import orient from "assets/icons/main/orientCompanyGray.png";
-import fidelity from "assets/icons/main/fidelityCompanyGray.png";
+import sukoon from "assets/icons/main/companies/sukoonGray.png";
+import orient from "assets/icons/main/companies/orientGray.png";
+import fidelity from "assets/icons/main/companies/fidelityGray.png";
 
 import styles from "./Companies.module.scss";
 

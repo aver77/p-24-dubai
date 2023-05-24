@@ -1,0 +1,36 @@
+@import "src/app/styles/vars";
+
+.content {
+  margin-top: 16px;
+  width: 100%;
+  height: 50%;
+  border: 1px solid rgba(47, 43, 67, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow-x: auto;
+  @media screen and (max-width: $iphoneWidth), screen and (max-height: $iphoneWidth) {
+    margin-top: 12px;
+  }
+}
+
+.brandContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  width: 189px;
+  height: 191px;
+
+  background: #FAFAFA;
+  border-radius: 8px;
+}
+
+.selected {
+  background: rgba(47, 128, 237, 0.17);
+}
