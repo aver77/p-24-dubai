@@ -19,6 +19,7 @@
     "react-alice-carousel": "^2.7.1",
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.2",
+    "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",

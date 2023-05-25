@@ -17,12 +17,10 @@
   }
 }
 
-.lastCardImg {
-  width: 343px;
-}
-
 .img {
-  @media screen and (max-width: $iphoneWidth) {
-    width: 200px;
+  max-height: 180px;
+  max-width: 100%;
+  @media screen and (max-width: 1400px) {
+    max-height: 140px;
   }
 }

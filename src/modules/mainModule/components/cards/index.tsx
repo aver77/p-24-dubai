@@ -6,7 +6,6 @@ import { useIntl } from "react-intl";
 import quotesCompanies from "assets/icons/main/companies/columnOfCompanies.png";
 import greenCarDiscounts from "assets/icons/main/greenCarDiscounts.png";
 import callOrBuy from "assets/icons/main/callOrBuyUmbrella.png";
-import cx from "classnames";
 
 const Cards: FC = () => {
     const intl = useIntl();
@@ -28,13 +27,7 @@ const Cards: FC = () => {
             <Card
                 title={intl.formatMessage({ id: "buyOnline" })}
                 description={intl.formatMessage({ id: "buyOnlineDesc" })}
-                content={
-                    <img
-                        className={cx(styles.img, styles.lastCardImg)}
-                        src={callOrBuy}
-                        alt={"call or buy"}
-                    />
-                }
+                content={<img className={styles.img} src={callOrBuy} alt={"call or buy"} />}
             />
         </div>
     );

@@ -10,6 +10,7 @@ import { useWindowSize } from "usehooks-ts";
 import { useEffect, useRef, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import usePopupsStore from "shared/lib/store/popupsStore";
+import { reloadWindow } from "shared/utils/reloadWindow";
 
 const Header = () => {
     const { currentLocale, setLocale } = useLocaleStore((state) => state);
@@ -59,7 +60,12 @@ const Header = () => {
 
     return (
         <div ref={headerRef} className={styles.header}>
-            <img src={isMobile ? logoSm : logo} alt={"logo"} />
+            <img
+                onClick={reloadWindow}
+                className={styles.logo}
+                src={isMobile ? logoSm : logo}
+                alt={"logo"}
+            />
             {isMobile ? (
                 <>
                     <img

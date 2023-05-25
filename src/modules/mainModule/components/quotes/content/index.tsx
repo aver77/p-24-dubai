@@ -3,30 +3,36 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Input from "shared/ui/input";
 import Button from "shared/ui/button";
 import styles from "./TabContent.module.scss";
-import { CAR, HOME, LIFE, PETS } from "../contants";
-import Pickers from "./pickers";
+import { CAR, TContent } from "../contants";
 import { regulateScroll } from "shared/utils/regulateScroll";
 import usePopupsStore from "shared/lib/store/popupsStore";
+import SuccessModal from "./successModal";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 interface ITabContent {
     imageSrc: string;
-    contentName: typeof CAR | typeof LIFE | typeof HOME | typeof PETS;
+    contentName: TContent;
 }
 
 const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
     const intl = useIntl();
-    const { burgerOpened, setPickerOpened: setStorePickerOpened } = usePopupsStore(
-        (state) => state
-    );
+    const { burgerOpened, setSuccessModalOpened, pickerOpened } = usePopupsStore((state) => state);
 
-    const [pickerOpened, setPickerOpened] = useState(false);
-    regulateScroll(pickerOpened || burgerOpened);
+    const [modalOpened, setModalOpened] = useState(false);
+    regulateScroll(modalOpened || burgerOpened || pickerOpened);
 
-    const onOpenPicker = () => setPickerOpened(true);
+    const onOpenModal = () => setModalOpened(true);
 
     useEffect(() => {
-        setStorePickerOpened(pickerOpened);
-    }, [pickerOpened]);
+        setSuccessModalOpened(modalOpened);
+    }, [modalOpened]);
+
+    const [phoneInputValue, setPhoneInputValue] = useState("");
+    const handleChangePhoneInput = (v: string) => {
+        setPhoneInputValue(v);
+    };
 
     return (
         <div className={styles.container}>
@@ -35,12 +41,24 @@ const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
                     <FormattedMessage id={"compareQuotesMain"} />
                 </p>
                 {contentName === CAR ? (
-                    <Input placeholder={intl.formatMessage({ id: "phoneNumber" })} />
+                    <PhoneInput
+                        country={"ae"}
+                        value={phoneInputValue}
+                        onChange={handleChangePhoneInput}
+                        inputClass={styles.phoneInput}
+                        onlyCountries={["ae"]}
+                        placeholder={intl.formatMessage({ id: "phoneNumber" })}
+                    />
                 ) : (
                     <Input placeholder={intl.formatMessage({ id: "zipCode" })} />
                 )}
                 <div className={styles.quotesActionsContainer}>
-                    <Button withShieldAndArrow className={styles.btn} onClick={onOpenPicker}>
+                    <Button
+                        disabled={phoneInputValue.length < 15}
+                        withShieldAndArrow
+                        className={styles.btn}
+                        onClick={onOpenModal}
+                    >
                         <FormattedMessage id={"getQuotes"} />
                     </Button>
                     <div className={styles.quotesActionsInfoText}>
@@ -56,7 +74,7 @@ const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
             <div className={styles.imgContainer}>
                 <img className={styles.image} alt={"image"} src={imageSrc} />
             </div>
-            {pickerOpened && <Pickers contentName={contentName} setOpened={setPickerOpened} />}
+            {modalOpened && <SuccessModal contentName={contentName} />}
         </div>
     );
 };

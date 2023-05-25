@@ -1,0 +1,62 @@
+@import "src/app/styles/vars";
+
+.container {
+  margin-top: $headerHeight;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  z-index: $modalZIndex;
+  padding: 0 $layoutPadding;
+  @media screen and (max-width: $ipadWith) {
+    padding: 0 $layoutPaddingIpad
+  }
+  @media screen and (max-width: $iphoneWidth) {
+    padding: 0 $layoutPaddingMobile
+  }
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.subTitle {
+  max-width: 624px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.stepsInfo {
+  margin: 12px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.checkMark {
+  position: absolute;
+  bottom: -4px;
+  right: -10px;
+}

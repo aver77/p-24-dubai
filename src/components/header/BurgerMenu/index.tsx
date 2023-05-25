@@ -4,6 +4,7 @@ import logoSm from "assets/svg/logoSm.svg";
 import close from "assets/svg/close.svg";
 import { regulateScroll } from "shared/utils/regulateScroll";
 import usePopupsStore from "shared/lib/store/popupsStore";
+import { reloadWindow } from "shared/utils/reloadWindow";
 
 interface IBurgerMenu {
     opened: boolean;
@@ -12,12 +13,12 @@ interface IBurgerMenu {
     langSwitcher: JSX.Element;
 }
 const BurgerMenu: FC<IBurgerMenu> = ({ opened, setOpened, langSwitcher }) => {
-    const pickerOpened = usePopupsStore((state) => state.pickerOpened);
+    const { pickerOpened, successModalOpened } = usePopupsStore((state) => state);
     const onClose = () => {
         setOpened(false);
     };
 
-    regulateScroll(opened || pickerOpened);
+    regulateScroll(opened || pickerOpened || successModalOpened);
 
     if (!opened) {
         return null;
@@ -26,7 +27,7 @@ const BurgerMenu: FC<IBurgerMenu> = ({ opened, setOpened, langSwitcher }) => {
     return (
         <div className={styles.menu}>
             <div className={styles.titleWrap}>
-                <img src={logoSm} alt={"logo"} />
+                <img className={styles.logo} onClick={reloadWindow} src={logoSm} alt={"logo"} />
                 <img className={styles.closeIcon} src={close} alt={"close"} onClick={onClose} />
             </div>
             <div className={styles.content}>{langSwitcher}</div>
