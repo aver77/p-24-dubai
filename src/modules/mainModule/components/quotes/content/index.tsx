@@ -18,21 +18,29 @@ interface ITabContent {
 
 const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
     const intl = useIntl();
-    const { burgerOpened, setSuccessModalOpened, pickerOpened } = usePopupsStore((state) => state);
+    const { defineIsSomeModalOpened, setSuccessModalOpened } = usePopupsStore((state) => state);
+    regulateScroll(defineIsSomeModalOpened());
+
+    const [phoneInputValue, setPhoneInputValue] = useState("");
+    const phoneInputLen = phoneInputValue.length;
 
     const [modalOpened, setModalOpened] = useState(false);
-    regulateScroll(modalOpened || burgerOpened || pickerOpened);
-
-    const onOpenModal = () => setModalOpened(true);
 
     useEffect(() => {
         setSuccessModalOpened(modalOpened);
     }, [modalOpened]);
 
-    const [phoneInputValue, setPhoneInputValue] = useState("");
+    const onOpenModal = () => setModalOpened(true);
     const handleChangePhoneInput = (v: string) => {
         setPhoneInputValue(v);
     };
+
+    const btnExtraProps =
+        contentName === CAR
+            ? {
+                  disabled: phoneInputLen < 12
+              }
+            : {};
 
     return (
         <div className={styles.container}>
@@ -46,6 +54,9 @@ const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
                         value={phoneInputValue}
                         onChange={handleChangePhoneInput}
                         inputClass={styles.phoneInput}
+                        inputProps={{
+                            maxLength: 16
+                        }}
                         onlyCountries={["ae"]}
                         placeholder={intl.formatMessage({ id: "phoneNumber" })}
                     />
@@ -54,7 +65,7 @@ const Content: FC<ITabContent> = ({ imageSrc, contentName }) => {
                 )}
                 <div className={styles.quotesActionsContainer}>
                     <Button
-                        disabled={phoneInputValue.length < 15}
+                        {...btnExtraProps}
                         withShieldAndArrow
                         className={styles.btn}
                         onClick={onOpenModal}

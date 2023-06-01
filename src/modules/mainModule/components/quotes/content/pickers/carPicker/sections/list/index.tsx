@@ -4,6 +4,7 @@ import { ChangeEvent, FC, useEffect, useState } from "react";
 import styles from "./List.module.scss";
 import cx from "classnames";
 import Input from "shared/ui/input";
+import { useIntl } from "react-intl";
 interface IList {
     property: string;
     mappedData: string[];
@@ -21,6 +22,8 @@ const List: FC<IList> = ({
     withCarName,
     searchPlaceholderId
 }) => {
+    const intl = useIntl();
+
     const [selectedListItem, setSelectedListItem] = useState<string>();
     const [clonedMappedData, setClonedMappedData] = useState<string[]>([]);
     const [searchValue, setSearchValue] = useState("");
@@ -59,7 +62,7 @@ const List: FC<IList> = ({
                 <Input
                     value={searchValue}
                     onChange={handleChangeSearch}
-                    placeholder={searchPlaceholderId}
+                    placeholder={intl.formatMessage({ id: searchPlaceholderId })}
                 />
             )}
             <div className={styles.content}>

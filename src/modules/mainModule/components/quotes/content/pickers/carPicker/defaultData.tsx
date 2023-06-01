@@ -236,7 +236,7 @@ export const getContentByKey = (
                     data={aggregatedData}
                     setData={setAggregatedData}
                     withCarName={true}
-                    searchPlaceholderId={"whereRegister"}
+                    searchPlaceholderId={"whereRegisterPH"}
                 />
             );
         }

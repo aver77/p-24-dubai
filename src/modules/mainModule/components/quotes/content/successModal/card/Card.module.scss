@@ -1,5 +1,8 @@
+@import "src/app/styles/vars";
+
 .container {
   max-width: 408px;
+  min-width: 220px;
   padding: 40px;
   gap: 24px;
   display: flex;
@@ -10,6 +13,11 @@
 
   border: 1px solid rgba(47, 43, 67, 0.1);
   border-radius: 32px;
+  @media screen and (max-width: $iphoneWidth) {
+    max-width: 240px;
+    gap: 12px;
+    padding: 20px;
+  }
 }
 
 .view {
@@ -22,4 +30,8 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }

@@ -13,12 +13,12 @@ interface IBurgerMenu {
     langSwitcher: JSX.Element;
 }
 const BurgerMenu: FC<IBurgerMenu> = ({ opened, setOpened, langSwitcher }) => {
-    const { pickerOpened, successModalOpened } = usePopupsStore((state) => state);
+    const defineIsSomeModalOpened = usePopupsStore((state) => state.defineIsSomeModalOpened);
     const onClose = () => {
         setOpened(false);
     };
 
-    regulateScroll(opened || pickerOpened || successModalOpened);
+    regulateScroll(defineIsSomeModalOpened());
 
     if (!opened) {
         return null;

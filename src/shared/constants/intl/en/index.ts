@@ -69,7 +69,6 @@ const EN = {
     fourthCustomerName: "Qantara Eid",
     customerMockText:
         "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful.",
-    findModel: "Find model",
     letsStartBrand: "Let’s start by picking your brand",
     whatModel: "What is the model of your",
     manufacturerYear: "What is the year of manufacture for your",
@@ -77,6 +76,27 @@ const EN = {
     whatIsValue: "What is the value of your",
     anyInsuranceClaims: "Do you have any previous insurance claims?",
     uaeLicenceLong: "How long do you have license in UAE?",
-    fillTheInfo: "Fill the contact information and get your quote now"
+    fillTheInfo: "Fill the contact information and get your quote now",
+    formSubmitted: "Form Submitted Successfully",
+    weWillSendOffers: "We Will Send the Best Offers to WhatsApp",
+    weSendInsurance: "We Send you Car Insurance Documents",
+    thanks: "THANK YOU",
+    shippersInTouch:
+        "One of our Personal Shoppers is working on your custom quote and will be in touch shortly",
+    manuallyEnter: "Manually Enter",
+    youAreDone: "You are done with 1 of 3 Steps",
+    findBrand: "Find your brand",
+    findModel: "Find model",
+    findYear: "Find year",
+    whereRegisterPH: "Where register",
+    insuranceClaims: "Insurance claims",
+    uaeLicence: "UAE Licence",
+    contactInfo: "Contact info",
+    firstName: "First Name",
+    lastName: "Last Name",
+    emailAddress: "Email address",
+    mobileNumber: "Mobile Number",
+    dateOfBirth: "Date of birth",
+    nationality: "Nationality"
 };
 export default EN;

@@ -7,6 +7,7 @@ import styles from "./BrandList.module.scss";
 import Item from "./Item";
 import cx from "classnames";
 import Input from "shared/ui/input";
+import { useIntl } from "react-intl";
 
 interface IBrandList {
     mappedData: carBrand[];
@@ -14,6 +15,7 @@ interface IBrandList {
     setData: (v: IAggregatedData) => void;
 }
 const BrandList: FC<IBrandList> = ({ mappedData, data, setData }) => {
+    const intl = useIntl();
     const [selectedBrand, setSelectedBrand] = useState(data.carName);
 
     const [searchValue, setSearchValue] = useState("");
@@ -46,7 +48,7 @@ const BrandList: FC<IBrandList> = ({ mappedData, data, setData }) => {
                 value={searchValue}
                 onChange={handleSearchChange}
                 prefix={<img src={searchIcon} alt={"loop"} />}
-                placeholder={"Find your brand"}
+                placeholder={intl.formatMessage({ id: "findBrand" })}
             />
             <div className={styles.content}>
                 {clonedMappedData.map((el, index) => (

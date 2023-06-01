@@ -70,6 +70,34 @@ const ARABIC = {
     fourthCustomerName: "القنطرة عيد",
     customerMockText:
         "لقد تم استخدامها لمدة عام الآن. كل شيء مفصل ومنظمة تنظيما جيدا ، وبطبيعة الحال ، لعنة جميلة.",
-    findModel: "Find model"
+    formSubmitted: "تم تقديم النموذج بنجاح",
+    letsStartBrand: "لنبدأ باختيار علامتك التجارية",
+    whatModel: "ما هو نموذج الخاص بك",
+    manufacturerYear: "ما هي سنة الصنع لجهودكم",
+    whereRegister: "حيث سيتم تسجيل الخاص بك",
+    whatIsValue: "ما هي قيمة الخاص بك",
+    anyInsuranceClaims: "هل لديك أي مطالبات التأمين السابقة?",
+    uaeLicenceLong: "كم من الوقت لديك ترخيص في الإمارات العربية المتحدة?",
+    fillTheInfo: "املأ معلومات الاتصال واحصل على عرض الأسعار الخاص بك الآن",
+    weWillSendOffers: "سوف نرسل أفضل العروض إلى واتساب",
+    weSendInsurance: "نرسل لك وثائق التأمين على السيارات",
+    thanks: "يعطيكم الصّحة",
+    shippersInTouch:
+        "يعمل أحد المتسوقين الشخصيين لدينا على عرض الأسعار المخصص الخاص بك وسيكون على اتصال قريبا",
+    manuallyEnter: "أدخل يدويا",
+    youAreDone: "لقد انتهيت من 1 من 3 خطوات",
+    findBrand: "ابحث عن علامتك التجارية",
+    findModel: "البحث عن نموذج",
+    findYear: "البحث عن السنة",
+    whereRegisterPH: "أين سجل",
+    insuranceClaims: "مطالبات التأمين",
+    uaeLicence: "رخصة الإمارات العربية المتحدة",
+    contactInfo: "معلومات الاتصال",
+    firstName: "الاسم الأول",
+    lastName: "اسم العائلة",
+    emailAddress: "عنوان البريد الإلكتروني",
+    mobileNumber: "رقم الجوال",
+    dateOfBirth: "تاريخ الميلاد",
+    nationality: "الجنسية"
 };
 export default ARABIC;

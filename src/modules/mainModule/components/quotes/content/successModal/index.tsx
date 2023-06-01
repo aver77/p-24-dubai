@@ -6,36 +6,28 @@ import checkMark from "assets/icons/main/steps/checkMark.png";
 import styles from "./SuccessModal.module.scss";
 import Card from "./card";
 import Button from "shared/ui/button";
-import usePopupsStore from "shared/lib/store/popupsStore";
-import { useEffect, useState } from "react";
-import { regulateScroll } from "shared/utils/regulateScroll";
+import { useState } from "react";
 import Pickers from "../pickers";
 import { TContent } from "../../contants";
+import { FormattedMessage, useIntl } from "react-intl";
 const SuccessModal = ({ contentName }: { contentName: TContent }) => {
-    const {
-        burgerOpened,
-        successModalOpened,
-        setPickerOpened: setStorePickerOpened
-    } = usePopupsStore((state) => state);
-
+    const intl = useIntl();
     const [pickerOpened, setPickerOpened] = useState(false);
-    regulateScroll(pickerOpened || burgerOpened || successModalOpened);
 
     const onOpenPicker = () => setPickerOpened(true);
-
-    useEffect(() => {
-        setStorePickerOpened(pickerOpened);
-    }, [pickerOpened]);
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <p className={styles.title}>THANK YOU</p>
-                <p className={styles.subTitle}>
-                    One of our Personal Shoppers is working on your custom quote and will be in
-                    touch shortly
+                <p className={styles.title}>
+                    <FormattedMessage id={"thanks"} />
                 </p>
-                <p className={styles.stepsInfo}>You are done with 1 of 3 Steps</p>
+                <p className={styles.subTitle}>
+                    <FormattedMessage id={"shippersInTouch"} />
+                </p>
+                <p className={styles.stepsInfo}>
+                    <FormattedMessage id={"youAreDone"} />
+                </p>
                 <div className={styles.cards}>
                     <Card
                         view={
@@ -48,19 +40,19 @@ const SuccessModal = ({ contentName }: { contentName: TContent }) => {
                                 />
                             </>
                         }
-                        title={"Form Submitted Successfully"}
+                        title={intl.formatMessage({ id: "formSubmitted" })}
                     />
                     <Card
                         view={<img src={step2} alt={"step2"} />}
-                        title={"We Will Send the Best Offers to WhatsApp"}
+                        title={intl.formatMessage({ id: "weWillSendOffers" })}
                     />
                     <Card
                         view={<img src={step3} alt={"step3"} />}
-                        title={"We Send you Car Insurance Documents"}
+                        title={intl.formatMessage({ id: "weSendInsurance" })}
                     />
                 </div>
-                <Button onClick={onOpenPicker} withShieldAndArrow={false}>
-                    Manually enter
+                <Button className={styles.btn} onClick={onOpenPicker} withShieldAndArrow={false}>
+                    <FormattedMessage id={"manuallyEnter"} />
                 </Button>
             </div>
             {pickerOpened && <Pickers contentName={contentName} setOpened={setPickerOpened} />}
