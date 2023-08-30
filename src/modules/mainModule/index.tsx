@@ -53,7 +53,7 @@ const MainModule = () => {
                     <FormattedMessage id={"compareWithTopRated"} />
                 </div>
             </Title>
-            <Companies />
+            <Slider initialPercentage={0.7} slideKey={SlideKeyEnum.COMPANIES} />
             <Title fontWeight={700} className={styles.titleWrap}>
                 <div className={styles.titleText}>
                     <FormattedMessage id={"getYourDose"} />

@@ -56,8 +56,8 @@ const EN = {
     mobile: "800 (Policy24) 72 93 22",
     schedule: "Monday - Sunday: 10:00 AM to 04:00 PM, and 08:00 PM to 02:00 AM",
     credentials:
-        "Policy24 LLC is authorized and regulated by the UAE Central Bank. Policy24 LLC is a licensed broker by the Central Bank with license number (287). Policy24 LLC© all rights reserved 2023. Policy24 LLC is located in Sky Tower, office 1006, Al Reem Island, Abu Dhabi. NO08773",
-    licence: "Licensed By Central Bank of UAE License Number 900",
+        "Policy24 FZ LLC is authorized and regulated by the UAE Central Bank. Policy24 FZ LLC is a registered Price Comparison Website (PCW) by the Central Bank with registration number 14. Policy24 FZ LLC© all rights reserved 2023.",
+    licence: "Licensed By Central Bank of UAE License Number 14",
     learnMore: "Learn more",
     compareAndSave: "Compare & save",
     newsMockText:

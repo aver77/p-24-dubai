@@ -3,6 +3,11 @@
 .sliderWrap {
   position: relative;
   padding-left: $layoutPadding;
+
+  :global(.alice-carousel__stage-item) {
+    min-width: fit-content !important;
+  }
+
   :global(.alice-carousel__prev-btn) {
     padding-top:55px !important;
     width: fit-content !important;
@@ -32,7 +37,7 @@
 }
 
 .sliderPaddedBtns {
-  :global(.alice-carousel__prev-btn) {
+  :global(.alice-carousel__next-btn) {
     padding-top: 80px !important;
   }
   :global(.alice-carousel__prev-btn) {
@@ -45,6 +50,15 @@
     :global(.alice-carousel__prev-btn) {
       padding-top: 50px !important;
     }
+  }
+}
+
+.sliderHidePaddedBtns {
+  :global(.alice-carousel__next-btn) {
+    display: none !important;
+  }
+  :global(.alice-carousel__prev-btn) {
+    display: none !important;
   }
 }
 

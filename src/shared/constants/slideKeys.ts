@@ -1,5 +1,6 @@
 export enum SlideKeyEnum {
     NEWS = "news",
     CUSTOMERS = "customers",
-    OFFERS = "offers"
+    OFFERS = "offers",
+    COMPANIES = "companies"
 }

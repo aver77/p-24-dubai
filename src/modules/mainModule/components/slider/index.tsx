@@ -13,9 +13,12 @@ import cx from "classnames";
 interface ISlider {
     initialPercentage: number;
     slideKey: SlideKeyEnum;
+
+    extraClasses?: string;
     extraDesc?: ReactNode;
+    withBtns?: boolean;
 }
-const Slider: FC<ISlider> = ({ initialPercentage, slideKey, extraDesc }) => {
+const Slider: FC<ISlider> = ({ initialPercentage, slideKey,extraClasses, extraDesc, withBtns= true }) => {
     const intl = useIntl();
 
     const section = useRef<HTMLDivElement>(null);
@@ -47,7 +50,7 @@ const Slider: FC<ISlider> = ({ initialPercentage, slideKey, extraDesc }) => {
     useEffect(syncSize, [percent]);
 
     return (
-        <div ref={section} className={cx(styles.sliderWrap, extraDesc && styles.sliderPaddedBtns)}>
+        <div ref={section} className={cx(styles.sliderWrap, extraClasses, extraDesc && styles.sliderPaddedBtns, !withBtns && styles.sliderHidePaddedBtns)}>
             <AliceCarousel
                 infinite
                 mouseTracking
