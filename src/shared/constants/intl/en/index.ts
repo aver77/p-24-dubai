@@ -1,3 +1,5 @@
+import news from "./news";
+
 const EN = {
     car: "Car",
     home: "Home",
@@ -53,22 +55,26 @@ const EN = {
     inst: "Instagram",
     whatsapp: "Whatsapp",
     twitter: "Twitter",
-    mobile: "800 (Policy24) 72 93 22",
+    mobile: "+971 58 595 8838",
     schedule: "Monday - Sunday: 10:00 AM to 04:00 PM, and 08:00 PM to 02:00 AM",
     credentials:
         "Policy24 FZ LLC is authorized and regulated by the UAE Central Bank. Policy24 FZ LLC is a registered Price Comparison Website (PCW) by the Central Bank with registration number 14. Policy24 FZ LLC© all rights reserved 2023.",
     licence: "Licensed By Central Bank of UAE License Number 14",
     learnMore: "Learn more",
     compareAndSave: "Compare & save",
-    newsMockText:
-        "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones.",
-    newsMockTitle: "Chubb names Benoit Chasseguet Country President for France",
-    firstCustomerName: "Yazid Nassif",
-    secondCustomerName: "Mustapha Shams",
-    thirdCustomerName: "Abal Ibrahim",
-    fourthCustomerName: "Qantara Eid",
-    customerMockText:
-        "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful.",
+    // newsMockText:
+    //     "This pledge reinforces our shared promise to prioritize your needs, providing exceptional customer service and tailored plans to safeguard your assets and loved ones.",
+    // newsMockTitle: "Chubb names Benoit Chasseguet Country President for France",
+    ...news,
+
+    firstCustomerName: "Sara Al-Hamdan",
+    secondCustomerName: "Khaled Bin Rashed",
+    thirdCustomerName: "Laila Youssef",
+    fourthCustomerName: "Rajesh Nambiar",
+    firstCustomerText: "Navigating the insurance market in Dubai was overwhelming until I discovered Policy24.ae. Their platform is intuitive, and I found the perfect policy that fits my needs. The experience was seamless. Highly recommended!",
+    secondCustomerText: "As an expat, understanding the ins and outs of Dubai's insurance landscape was a challenge. Thankfully, Policy24.ae made it incredibly straightforward. I secured my car and health insurance within minutes. A game-changer!",
+    thirdCustomerText: "With so many insurance options out there, I was lost. Policy24.ae was a breath of fresh air! The comparisons were easy to understand, and the customer support was top-notch. Thank you for simplifying my insurance hunt.",
+    fourthCustomerText: "Policy24.ae isn’t just another aggregator; it’s a comprehensive guide to insurance in Dubai. I not only found the best rates but also learned more about what I was purchasing. Transparent, efficient, and user-friendly!",
     letsStartBrand: "Let’s start by picking your brand",
     whatModel: "What is the model of your",
     manufacturerYear: "What is the year of manufacture for your",
@@ -97,6 +103,6 @@ const EN = {
     emailAddress: "Email address",
     mobileNumber: "Mobile Number",
     dateOfBirth: "Date of birth",
-    nationality: "Nationality"
+    nationality: "Nationality",
 };
 export default EN;

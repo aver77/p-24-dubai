@@ -15,7 +15,7 @@
 
 .item {
   max-width: 516px;
-  max-height: 311px;
+  max-height: 470px;
   background: white;
   border: 1px solid rgba(47, 43, 67, 0.1);
   border-radius: 32px;
@@ -25,7 +25,6 @@
   align-items: start;
   justify-content: center;
   gap: 24px;
-  transition: 0.2s ease;
   @media screen and (max-width: $iphoneWidth) {
     padding: 20px;
   }
@@ -42,6 +41,29 @@
   }
 }
 
+.extraInfo {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  @media screen and (max-width: $iphoneWidth) {
+    font-size: 16px;
+  }
+}
+
+.extraInfoHide {
+  opacity: 0;
+  height: 0;
+  margin-bottom: -24px;
+  transition: 0.3s ease;
+}
+
+.extraInfoShow {
+  opacity: 1;
+  height: auto;
+  transition: 0.3s ease;
+}
+
 .text {
   font-weight: 400;
   font-size: 16px;
@@ -53,8 +75,16 @@
 }
 
 .btn {
-  background: rgba(47, 43, 67, 0.05) !important;
   border-radius: 12px;
-  color: black !important;
   border: none !important;
+}
+
+.btnShow {
+  background: rgba(47, 43, 67, 0.05) !important;
+  color: black !important;
+}
+
+.btnHide {
+  background: $green !important;
+  color: white !important;
 }

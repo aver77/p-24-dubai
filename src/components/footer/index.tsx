@@ -48,9 +48,7 @@ const Footer: FC = () => {
                 </div>
                 <div className={styles.contacts}>
                     <img className={styles.img} src={logo} alt={"logo"} />
-                    <p className={styles.number}>
-                        <FormattedMessage id={"mobile"} />
-                    </p>
+                    <a className={styles.number} href="tel:+971585958838"><FormattedMessage id={"mobile"} /></a>
                     <p className={styles.schedule}>
                         <FormattedMessage id={"schedule"} />
                     </p>

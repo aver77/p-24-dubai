@@ -41,49 +41,63 @@ export const getSliderItems = (intl: IntlShape, key: SlideKeyEnum) => {
                 <CustomersSlide
                     key={"1"}
                     title={intl.formatMessage({ id: "firstCustomerName" })}
-                    text={intl.formatMessage({ id: "customerMockText" })}
+                    text={intl.formatMessage({ id: "firstCustomerText" })}
                 />,
                 <CustomersSlide
                     key={"2"}
                     title={intl.formatMessage({ id: "secondCustomerName" })}
-                    text={intl.formatMessage({ id: "customerMockText" })}
+                    text={intl.formatMessage({ id: "secondCustomerText" })}
                 />,
                 <CustomersSlide
                     key={"3"}
                     title={intl.formatMessage({ id: "thirdCustomerName" })}
-                    text={intl.formatMessage({ id: "customerMockText" })}
+                    text={intl.formatMessage({ id: "thirdCustomerText" })}
                 />,
                 <CustomersSlide
                     key={"4"}
                     title={intl.formatMessage({ id: "fourthCustomerName" })}
-                    text={intl.formatMessage({ id: "customerMockText" })}
+                    text={intl.formatMessage({ id: "fourthCustomerText" })}
                 />
+            ];
+        }
+        case SlideKeyEnum.COMPANIES: {
+            return [
+                <CompaniesSlide key={"1"} src={methadGray} alt={"methad"}/>,
+                <CompaniesSlide key={"2"} src={adamjeeGray} alt={"adamjee"}/>,
+                <CompaniesSlide key={"3"} src={takafulGray} alt={"takaful"}/>,
+                <CompaniesSlide key={"4"} src={sukoonGray} alt={"sukoon"}/>,
+                <CompaniesSlide key={"5"} src={orientGray} alt={"orient"}/>,
+                <CompaniesSlide key={"6"} src={tokioMarineGray} alt={"tokioMarine"}/>,
+                <CompaniesSlide key={"7"} src={fidelityGray} alt={"fidelity"}/>,
+                <CompaniesSlide key={"8"} src={rakInsuranceGray} alt={"rakInsuranceGray"}/>,
             ];
         }
         case SlideKeyEnum.NEWS: {
             return new Array(4)
                 .fill(undefined)
-                .map((el, index) => (
-                    <NewsSlide
-                        key={index}
-                        title={intl.formatMessage({ id: "newsMockTitle" })}
-                        secondTitle={intl.formatMessage({ id: "newsMockTitle" })}
-                        text={intl.formatMessage({ id: "newsMockText" })}
-                        secondText={intl.formatMessage({ id: "newsMockText" })}
-                    />
-                ));
-        }
-        case SlideKeyEnum.COMPANIES: {
-            return [
-                <CompaniesSlide src={methadGray} alt={"methad"}/>,
-                <CompaniesSlide src={adamjeeGray} alt={"adamjee"}/>,
-                <CompaniesSlide src={takafulGray} alt={"takaful"}/>,
-                <CompaniesSlide src={sukoonGray} alt={"sukoon"}/>,
-                <CompaniesSlide src={orientGray} alt={"orient"}/>,
-                <CompaniesSlide src={tokioMarineGray} alt={"tokioMarine"}/>,
-                <CompaniesSlide src={fidelityGray} alt={"fidelity"}/>,
-                <CompaniesSlide src={rakInsuranceGray} alt={"rakInsuranceGray"}/>,
-            ];
+                .map((el, index) => {
+                    const increasedIndex = index + 1;
+
+                    const titleId = increasedIndex + "newTitle";
+                    const textId = increasedIndex + "newText";
+                    const extraTextId = increasedIndex + "newExtraText";
+
+                    const secondTitleId = increasedIndex + "new2Title";
+                    const secondTextId = increasedIndex + "new2Text";
+                    const secondExtraTextId = increasedIndex + "new2ExtraText";
+
+                    return (
+                        <NewsSlide
+                            key={index}
+                            title={intl.formatMessage({id: titleId})}
+                            text={intl.formatMessage({id: textId})}
+                            extraText={intl.formatMessage({id: extraTextId})}
+                            secondTitle={intl.formatMessage({id: secondTitleId})}
+                            secondText={intl.formatMessage({id: secondTextId})}
+                            secondExtraText={intl.formatMessage({id: secondExtraTextId})}
+                        />
+                    )
+                });
         }
 
         default: {

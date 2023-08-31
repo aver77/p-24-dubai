@@ -2,7 +2,7 @@
 
 .container {
   cursor: pointer;
-  padding: 0 40px;
+  //padding: 0 40px;
   height: 100%;
   margin-right: 24px;
 
@@ -10,7 +10,7 @@
   justify-content: left;
   align-items: center;
 
-  @media screen and (max-width: $iphoneWidth) {
-    padding: 0 40px;
-  }
+  //@media screen and (max-width: $iphoneWidth) {
+  //  padding: 0 40px;
+  //}
 }
